@@ -15,73 +15,111 @@
         }
         h1 { color: #2c3e50; }
         h2 { color: #3498db; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-        .highlight { background-color: #f8f9fa; padding: 15px; border-radius: 5px; }
+        .highlight { 
+            background-color: #f8f9fa; 
+            padding: 15px; 
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        a { color: #2980b9; }
     </style>
 </head>
 <body>
     <h1>CubicNurika Privacy Policy</h1>
     <p><strong>Last updated:</strong> <span id="current-date"></span></p>
 
+    <div class="highlight">
+        <p><strong>⚠️ Key Summary:</strong> We use Unity Ads which collects device data for personalized ads. No emails/names are collected. <a href="#ads">See details</a>.</p>
+    </div>
+
     <div class="section">
-        <h2>1. Data Collection</h2>
-        <p>Our app <strong>does NOT collect</strong> personal information like your name, email, or contacts. However, we use:</p>
+        <h2 id="ads">1. Advertising and Analytics</h2>
+        <p>Our app uses:</p>
         <div class="highlight">
             <ul>
-                <li><strong>Huawei Ads Kit</strong>: Collects <u>advertising ID</u>, <u>IP address</u>, and <u>device info</u> (model, OS) for ad targeting</li>
-                <li><strong>Game Analytics</strong>: Anonymous data about gameplay (level progress, session length)</li>
+                <li><strong>Unity Monetization</strong>:
+                    <ul>
+                        <li>Collects <u>Advertising ID</u> (AAID/IDFA)</li>
+                        <li>Device data (model, OS version, language)</li>
+                        <li>IP address (for approximate location)</li>
+                        <li>Ad engagement metrics</li>
+                    </ul>
+                </li>
+                <li><strong>Unity Analytics</strong> (anonymous):
+                    <ul>
+                        <li>Gameplay sessions duration</li>
+                        <li>Level progression</li>
+                        <li>Crash reports</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>This data is used solely for ad targeting and game improvement.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2. Data NOT Collected</h2>
+        <div class="highlight">
+            <p>We <strong>do NOT</strong> collect:</p>
+            <ul>
+                <li>Your name or email address</li>
+                <li>Phone contacts or messages</li>
+                <li>Exact GPS location</li>
+                <li>Payment information</li>
             </ul>
         </div>
     </div>
 
     <div class="section">
-        <h2>2. Why We Collect Data</h2>
+        <h2>3. Your Control Options</h2>
         <ul>
-            <li>To show relevant ads and support free gameplay</li>
-            <li>Improve game performance and fix bugs</li>
-            <li>Understand player preferences (no personal identification)</li>
+            <li><strong>Opt-out of personalized ads</strong>:
+                <ul>
+                    <li>Android: Google Settings → Ads → Opt out</li>
+                    <li>iOS: Settings → Privacy → Apple Advertising → Limit Ad Tracking</li>
+                </ul>
+            </li>
+            <li><strong>Reset Advertising ID</strong> in device settings</li>
+            <li><strong>Delete analytics data</strong>: Contact us via email below</li>
         </ul>
     </div>
 
     <div class="section">
-        <h2>3. Data Sharing</h2>
-        <p>Data is shared only with:</p>
+        <h2>4. Third-Party Partners</h2>
+        <p>Data may be shared with:</p>
         <div class="highlight">
             <ul>
-                <li><strong>Unity Ads partners</strong> (for ad delivery)</li>
-                <li><strong>Analytics services</strong> (in aggregated form)</li>
+                <li>Unity Technologies (<a href="https://unity3d.com/legal/privacy-policy" target="_blank">Privacy Policy</a>)</li>
+                <li>Ad networks via Unity's mediation</li>
             </ul>
-            <p>We <strong>never sell</strong> your data to third parties.</p>
         </div>
     </div>
 
     <div class="section">
-        <h2>4. Your Rights</h2>
-        <ul>
-            <li>Opt-out of personalized ads in device settings</li>
-            <li>Request data deletion via email</li>
-            <li>Disable analytics in game settings</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>5. Contact Us</h2>
-        <p>For privacy requests:</p>
+        <h2>5. Contact Information</h2>
         <div class="highlight">
-            <p>Email: <a href="nuradilmukanbet066@gmail.com">privacy@yourdomain.com</a></p>
-           
+            <p><strong>For data deletion requests:</strong></p>
+            <p>Email: <a href="mailto:privacy@yourdomain.com">privacy@yourdomain.com</a></p>
+            <p>Or use web form: <a href="https://yourdomain.com/data-request" target="_blank">https://yourdomain.com/data-request</a></p>
         </div>
     </div>
 
     <div class="section">
-        <h2>6. Policy Changes</h2>
-        <p>Updates will be posted at: <br>
+        <h2>6. Policy Updates</h2>
+        <p>This policy may change. The current version is always at:<br>
         <a href="https://yourdomain.com/privacy" target="_blank">https://yourdomain.com/privacy</a></p>
     </div>
 
     <script>
+        // Auto-update date
         document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', {
-            year: 'numeric', month: 'long', day: 'numeric'
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric'
         });
+        
+        // Add last modified date for compliance
+        document.write('<p><small>Page last modified: ' + document.lastModified + '</small></p>');
     </script>
 </body>
 </html>
